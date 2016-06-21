@@ -9,7 +9,7 @@ ui <- fluidPage(
                  column(width=12, offset=0,
                         HTML(" <br> 
 <p> <h4> <strong>BioPET </strong>
-is a tool to help evaluate biomarkers for prognostic enrichment of a clinical trial. PrognosticEnrichment (Temple, 2010) is a clinical trial strategy of evaluating an intervention in a patient populationwith a higher rate of some unwanted event than the broader patient population. This higher event rate translates to a lower sample size for the clinical trial, which can have both practical and ethical advantages.
+is a tool to help evaluate biomarkers for prognostic enrichment of a clinical trial. PrognosticEnrichment (Temple, 2010) is a clinical trial strategy of evaluating an intervention in a patient population with a higher rate of some unwanted event than the broader patient population. This higher event rate translates to a lower sample size for the clinical trial, which can have both practical and ethical advantages.
 </h4> </p>
 <p> <h4> <strong> BioPET </strong>
 is also available as a package for the R Statistical Computing Platform. The R package offers extended functionality, allowing investigators to analyze their own biomarker data rather than relying on prototypical ROC curves.
