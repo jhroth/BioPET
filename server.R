@@ -8,7 +8,6 @@ library(VGAM)
 source("functions.R")
 
 
-
 server <- function(input, output) {
     output$roc.choices <- renderPlot({
         user_auc_to_plots(auc=0.75, baseline.event.rate=input$outcome_prevalence)

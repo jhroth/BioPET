@@ -20,9 +20,7 @@ is a tool to help evaluate biomarkers for prognostic enrichment of clinical tria
 </h4> </p>
 <p> <h4> <strong> BioPET </strong>
 is also available as a package for the R Statistical Computing Platform. The R package offers extended functionality, allowing investigators to analyze their own biomarker data rather than relying on prototypical ROC curves.
-</h4> </p> <br>
-<p> <h5> <strong> Reference </strong> </h5>
-<p> Temple R. Enrichment of clinical study populations. Clin Pharmacol Ther 2010; 88: 774-778. </h4> </p>
+</h4> </p>
 <br> <hr>")
                  )
             ),
