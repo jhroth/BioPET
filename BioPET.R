@@ -16,15 +16,13 @@ ui <- fluidPage(
                  column(width=12, offset=0,
                         HTML(" <br> 
 <p> <h4> <strong>BioPET </strong>
-is a tool to help evaluate biomarkers for prognostic enrichment of a clinical trial. PrognosticEnrichment (Temple, 2010) is a clinical trial strategy of evaluating an intervention in a patient population with a higher rate of some unwanted event than the broader patient population. This higher event rate translates to a lower sample size for the clinical trial, which can have both practical and ethical advantages.
+is a tool to help evaluate biomarkers for prognostic enrichment of clinical trials. Prognostic Enrichment (Temple, 2010; PMID 20944560) is a clinical trial strategy of evaluating an intervention in a patient population with a higher rate of the unwanted event than the broader patient population.  This higher event rate translates to a lower sample size for the clinical trial, which can have both practical and ethical advantages.
 </h4> </p>
 <p> <h4> <strong> BioPET </strong>
 is also available as a package for the R Statistical Computing Platform. The R package offers extended functionality, allowing investigators to analyze their own biomarker data rather than relying on prototypical ROC curves.
 </h4> </p> <br>
 <p> <h5> <strong> Reference </strong> </h5>
-<p> Temple R. Enrichment of clinical study populations. Clin Pharmacol Ther 2010; 88: 774-778. </h4> </p> <br>
-<p> <h5> <strong> Acknowledgement</strong> </h5>
-<p> This work was supported by NIH grant R01085757 (<a href='http://patr.yale.edu'>http://patr.yale.edu</a>) </h4> </p>
+<p> Temple R. Enrichment of clinical study populations. Clin Pharmacol Ther 2010; 88: 774-778. </h4> </p>
 <br> <hr>")
                  )
             ),
@@ -66,7 +64,9 @@ is also available as a package for the R Statistical Computing Platform. The R p
                                   <p> <h5> <strong> Number needed to screen (NNS) </strong> </p> <p> The estimated number of patients who need to be screened to identify one patient eligible for the trial. </h5> </p> <br>
                                    <p> <h5> <strong> “Event rate among biomarker-positive patients </strong> </p> <p> The estimated event rate among the trial participants if the biomarker were used for prognostic enrichment. </h5> </p> <br>
                                    <p> <h5> <strong> Total screened </strong> </p> <p> The estimated total number of individuals who must be screened to enroll the prognostically enriched trial. </h5> </p> <br>
-                                   <p> <h5> <strong> Total cost </strong> </p> <p>  The estimated total cost of running the trial if the biomarker were used for prognostic enrichment. </h5> </p>")
+                                   <p> <h5> <strong> Total cost </strong> </p> <p>  The estimated total cost of running the trial if the biomarker were used for prognostic enrichment. </h5> </p> <br> <br>"),
+h5(strong("Acknowledgement"), align="center"),
+HTML("<p> This work was supported by NIH grant R01085757 (<a href='http://patr.yale.edu'>http://patr.yale.edu</a>) </h4> </p>")
                         )
              )
         ),
