@@ -8,6 +8,7 @@ library(VGAM)
 source("functions.R")
 
 
+
 server <- function(input, output) {
     output$roc.choices <- renderPlot({
         user_auc_to_plots(auc=0.75, baseline.event.rate=input$outcome_prevalence)
@@ -38,12 +39,12 @@ server <- function(input, output) {
             n <- nrow(my.table)
             p <- ncol(my.table)
             print(dim(my.table))
-            if (p == 6) {
+            if (p == 5) {
                 my.inputs.names <- c("Baseline event rate", "Percent reduction in event rate under treatment",
                                      "Form of alternative hypothesis", "Type I error rate", "Power", "AUC", "Biomarker ROC curve")
                 my.inputs <- c(as.character(input$outcome_prevalence), as.character(input$rate_reduction),
                                as.character(input$alternative), as.character(input$alpha), as.character(input$power), as.character(input$auc.marker1), as.character(input$roc.type.marker1))
-            } else if (p == 8) {
+            } else if (p == 7) {
                 my.inputs.names <- c("Baseline event rate", "Percent reduction in event rate under treatment",
                                      "Form of alternative hypothesis", "Type I error rate", "Power", "AUC", "Biomarker ROC curve",
                                      "Screening cost", "Retention cost")
