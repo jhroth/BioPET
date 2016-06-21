@@ -76,12 +76,12 @@ server <- function(input, output) {
                 n <- nrow(my.table)
                 p <- ncol(my.table)
                 print(dim(my.table))
-                if (p == 6) {
+                if (p == 5) {
                     my.inputs.names <- c("Baseline event rate", "Percent reduction in event rate under treatment",
                                          "Form of alternative hypothesis", "Type I error rate", "Power", "AUC", "Biomarker ROC curve")
                     my.inputs <- c(as.character(input$outcome_prevalence), as.character(input$rate_reduction),
                                    as.character(input$alternative), as.character(input$alpha), as.character(input$power), as.character(input$auc.marker2), as.character(input$roc.type.marker2))
-                } else if (p == 8) {
+                } else if (p == 7) {
                     my.inputs.names <- c("Baseline event rate", "Percent reduction in event rate under treatment",
                                          "Form of alternative hypothesis", "Type I error rate", "Power", "AUC", "Biomarker ROC curve",
                                          "Screening cost", "Retention cost")
@@ -115,12 +115,12 @@ server <- function(input, output) {
                 n <- nrow(my.table)
                 p <- ncol(my.table)
                 print(dim(my.table))
-                if (p == 6) {
+                if (p == 5) {
                     my.inputs.names <- c("Baseline event rate", "Percent reduction in event rate under treatment",
                                          "Form of alternative hypothesis", "Type I error rate", "Power", "AUC", "Biomarker ROC curve")
                     my.inputs <- c(as.character(input$outcome_prevalence), as.character(input$rate_reduction),
                                    as.character(input$alternative), as.character(input$alpha), as.character(input$power), as.character(input$auc.marker3), as.character(input$roc.type.marker3))
-                } else if (p == 8) {
+                } else if (p == 7) {
                     my.inputs.names <- c("Baseline event rate", "Percent reduction in event rate under treatment",
                                          "Form of alternative hypothesis", "Type I error rate", "Power", "AUC", "Biomarker ROC curve",
                                          "Screening cost", "Retention cost")
