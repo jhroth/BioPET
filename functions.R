@@ -66,12 +66,16 @@ enrichment_simulation <- function(formula=NULL,
  ## Calculate the summaries of the vector of biomarker quantiles we want to display ##
 ###########################################
         if (updated.roc.type[i] %in% c("symmetric", "high.tpr.earlier")) {
-            NNS <- sapply(biomarker.quantiles.all, function(x) N / sum(biomarker > x))
-            event.rate <- sapply(biomarker.quantiles.all, function(x) sum(response[biomarker > x]) / sum(biomarker > x))
+            # NNS <- sapply(biomarker.quantiles.all, function(x) N / sum(biomarker > x)) ## 06/21: commenting out since we are no longer using percentiles in controls
+            NNS <- 1 / (1 - simulation.data$selected.biomarker.quantiles)
+            event.rate <- sapply(biomarker.quantiles.all, function(x) sum(response[biomarker >= x]) / sum(biomarker >= x))
+            event.rate[1] <- baseline.event.rate
         } else {
             ## negative biomarker value to keep direction of unequality (since a test-positive is now a lower value of the biomarker)
-            NNS <- sapply(biomarker.quantiles.all, function(x) N / sum(-biomarker > x))
-            event.rate <- sapply(biomarker.quantiles.all, function(x) sum(response[-biomarker > x]) / sum(-biomarker > x))
+            # NNS <- sapply(biomarker.quantiles.all, function(x) N / sum(-biomarker > x)) ## 06/21: commenting out since we are no longer using percentiles in controls
+            NNS <- 1 / (1 - simulation.data$selected.biomarker.quantiles)
+            event.rate <- sapply(biomarker.quantiles.all, function(x) sum(response[-biomarker >= x]) / sum(-biomarker >= x))
+            event.rate[1] <- baseline.event.rate
         }
         SS <- sample_size(event.rate=event.rate, reduction.under.treatment=reduction.under.treatment, alpha=alpha, power=power, alternative=alternative)
         N.screen <- SS * NNS # total number of patients needed to be screened
