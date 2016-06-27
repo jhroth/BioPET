@@ -114,7 +114,7 @@ enrichment_simulation <- function(formula=NULL,
         #plot.data$AUC <- as.character(updated.auc[i])
         plot.data$Biomarker <- paste("Biomarker", as.character(i), sep=" ")
         plot.data.check <- rbind(plot.data.check, plot.data)
-        roc.df <- as.data.frame(cbind(roc.data$fpr.vec, roc.data$tpr.vec))
+        roc.df <- as.data.frame(cbind(roc.data$fpr.vec * 100, roc.data$tpr.vec * 100))
         roc.df$Biomarker <- paste("Biomarker", as.character(i), sep=" ")
         roc.data.check <- rbind(roc.data.check, roc.df)
     }
@@ -192,20 +192,25 @@ plot_enrichment_summaries <- function(x,
     cost.indicator <- "total.cost" %in% names(plot.data) & "cost.reduction.percentage" %in% names(plot.data)
     ## ROC curves
     plot.ROC <- ggplot(roc.data, aes(FPR, y=TPR, group=Biomarker, shape=Biomarker, col=Biomarker, linetype=Biomarker, fill=Biomarker)) + geom_line(size=0.9) + geom_abline(intercept = 0, slope = 1, linetype="dashed", colour="gray") + coord_fixed() +
-        labs(x="FPR", y="TPR") +
+        labs(x="FPR (%)", y="TPR (%)") +
         ggtitle("ROC Curve for Specified Biomarkers")  
     plot.ROC <- plot.ROC + expand_limits(y=0) +
         theme(axis.title.x = element_text(size=text.size.x.axis)) +
         theme(axis.title.y = element_text(size=text.size.y.axis)) +
         theme(axis.text= element_text(size=text.size.axis.ticks)) +
-        theme(plot.title = element_text(size=text.size.plot.title))  + scale_x_continuous(expand = c(0, 0)) +
+        theme(plot.title = element_text(size=text.size.plot.title)) +
+     #+scale_x_continuous(expand = c(0, 0)) +
         theme(legend.text=element_text(size=14), legend.title=element_blank()) +
         theme(legend.key.size = unit(0.80, "cm")) + 
         theme(legend.position=c(0.7, 0.20))
     ## Biomarker percentile vs. sample size
     plot.sample.size <- ggplot(plot.data, aes(selected.biomarker.quantiles, y=SS, group=Biomarker, shape=Biomarker, col=Biomarker, linetype=Biomarker, fill=Biomarker)) + geom_line(size=0.9) + geom_point(size=2.5) +
-        labs(x="", y="Sample Size") +
-        ggtitle("Clinical Trial Total Sample Size") 
+        ggtitle("Clinical Trial Total Sample Size")
+    if (cost.indicator == TRUE) {
+        plot.sample.size <-  plot.sample.size + labs(x="", y="Sample Size")
+    } else {
+        plot.sample.size <-  plot.sample.size + labs(x="Percent of Patients Screened from Trial", y="Total Cost")
+    }
     plot.sample.size <- plot.sample.size + expand_limits(y=0) +
         theme(axis.title.x = element_text(size=text.size.x.axis)) +
         theme(axis.title.y = element_text(size=text.size.y.axis)) +
