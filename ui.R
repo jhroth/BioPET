@@ -52,7 +52,7 @@ is also available as a package for the R Statistical Computing Platform. The R p
                         br(),
                         HTML("<p> <h5> <strong> Sample size </strong> </p> <p> The sample size required for a clinical trial enrolling only patients who are biomarker-positive. </h5> </p> <br>
                                   <p> <h5> <strong> Number needed to screen (NNS) </strong> </p> <p> The estimated number of patients who need to be screened to identify one patient eligible for the trial. </h5> </p> <br>
-                                   <p> <h5> <strong> “Event rate among biomarker-positive patients </strong> </p> <p> The estimated event rate among the trial participants if the biomarker were used for prognostic enrichment. </h5> </p> <br>
+                                   <p> <h5> <strong> Event rate among biomarker-positive patients </strong> </p> <p> The estimated event rate among the trial participants if the biomarker were used for prognostic enrichment. </h5> </p> <br>
                                    <p> <h5> <strong> Total screened </strong> </p> <p> The estimated total number of individuals who must be screened to enroll the prognostically enriched trial. </h5> </p> <br>
                                    <p> <h5> <strong> Total cost </strong> </p> <p>  The estimated total cost of running the trial if the biomarker were used for prognostic enrichment. </h5> </p> <br> <br>"),
 h5(strong("Acknowledgement"), align="center"),
