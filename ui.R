@@ -15,7 +15,7 @@ is also available as a package for the R Statistical Computing Platform. The R p
 </h4> </p>
 <p> <h4> 
 A full paper (Kerr et al., 2017; PMID 28795578) corresponding to this tool is also available 
-<a href="http://journals.sagepub.com/doi/abs/10.1177/1740774517723588">here</a>.
+<a href='http://journals.sagepub.com/doi/abs/10.1177/1740774517723588'>here</a>.
 </h4> </p>
 <br> <hr>")
                  )
