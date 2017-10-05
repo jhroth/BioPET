@@ -14,7 +14,7 @@ is a tool to help evaluate biomarkers for prognostic enrichment of clinical tria
 is also available as a package for the R Statistical Computing Platform. The R package offers extended functionality, allowing investigators to analyze their own biomarker data rather than relying on prototypical ROC curves.
 </h4> </p>
 <p> <h4> 
-The paper <q> Evaluating biomarkers for prognostic enrichment of clinical trials. </q> in <i> Clinical Trials </i> describes this tool in more detail and is available 
+The paper <q> Evaluating biomarkers for prognostic enrichment of clinical trials </q> in <i> Clinical Trials </i>, which describes this tool in more detail, is available 
 <a href='https://www.ncbi.nlm.nih.gov/pubmed/?term=28795578'>here</a>.
 </h4> </p>
 <br> <hr>")
