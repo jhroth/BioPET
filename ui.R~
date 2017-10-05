@@ -14,8 +14,8 @@ is a tool to help evaluate biomarkers for prognostic enrichment of clinical tria
 is also available as a package for the R Statistical Computing Platform. The R package offers extended functionality, allowing investigators to analyze their own biomarker data rather than relying on prototypical ROC curves.
 </h4> </p>
 <p> <h4> 
-A full paper (Kerr et al., 2017; PMID 28795578) corresponding to this tool is also available 
-<a href='http://journals.sagepub.com/doi/abs/10.1177/1740774517723588">here</a>.
+A full paper corresponding to this tool (Kerr et al., 2017; PMID 28795578) is also available 
+<a href='http://journals.sagepub.com/doi/abs/10.1177/1740774517723588'>here</a>.
 </h4> </p>
 <br> <hr>")
                  )
